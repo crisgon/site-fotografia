@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -388,5 +389,40 @@ template {
  */
 [hidden] {
   display: none; }
+
+/*-----------------------CSS geral-----------------------*/
+body {
+  background-color: #f2f2f2;
+  font-family: 'Josefin Sans', sans-serif; }
+
+img {
+  max-width: 100%; }
+
+.cabecalho {
+  width: 100%;
+  height: 5em;
+  position: fixed;
+  padding: 1em;
+  box-sizing: border-box;
+  background-color: #ffb700; }
+
+.cabecalho .logo {
+  width: 70%;
+  display: inline-block; }
+
+.cabecalho .botao-menu {
+  width: 28%;
+  display: inline-block;
+  position: absolute;
+  right: 0; }
+
+.cabecalho .abrir-menu {
+  height: 0;
+  width: 4em;
+  background-color: transparent;
+  padding-top: .5em;
+  border-top: 1.5em double #fff;
+  border-bottom: .5em solid #fff;
+  text-indent: -9999px; }
 
 /*# sourceMappingURL=estilos.css.map */
