@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 @import 'helpers/variaveis';
+@import 'helpers/mixins-placeholders';
 @import 'base/normalize';
 
 
@@ -18,6 +19,7 @@ img{
 	width: 100%;
 	height: 5em;
 	position: fixed;
+	@extend %z-index-999;
 	padding: 1em;
 	box-sizing: border-box;
 	background-color: $amarelo-padrao;
@@ -69,8 +71,8 @@ img{
 	height: 100%;
 	position: fixed;
 	top: 0;
-	right: 0;
-	z-index: 999;
+	right: -70%;
+	@extend %z-index-999;
 	background-color: $cinza-escuro-padrao;
 
 	ul{
@@ -95,3 +97,45 @@ img{
 	}
 }
 
+.baner{
+	width: 100%;
+	height: 70%;
+	position: absolute;
+	top: 5em;
+	background-image: url("../images/baner-noiva.jpg");
+	background-size: cover;
+	background-position: center;
+	text-align: center;
+
+	&:after{
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: rgba(0,0,0,.5);
+	}
+
+	.texto-apresentacao{
+		width: 100%;
+		position: absolute;
+		top: 2em;
+		@extend %z-index-999;
+		box-sizing: border-box;
+		padding: .8em;
+		color: $branco;
+		font-size: 1.5em;
+	}
+
+	.redes-sociais{
+		position: absolute;
+		top: 18em;
+		@extend %z-index-999;
+
+		ul li{
+			display: inline;
+			background-color: $branco;
+		}
+	}
+}

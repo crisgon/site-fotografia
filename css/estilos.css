@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+.cabecalho, .menu, .baner .texto-apresentacao, .baner .redes-sociais {
+  z-index: 999; }
+
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -443,8 +446,7 @@ img {
   height: 100%;
   position: fixed;
   top: 0;
-  right: 0;
-  z-index: 999;
+  right: -70%;
   background-color: #48524f; }
   .menu ul {
     list-style: none;
@@ -459,5 +461,37 @@ img {
         transition: border 1s; }
         .menu ul li a:hover, .menu ul li a focus {
           border-color: #fff; }
+
+.baner {
+  width: 100%;
+  height: 70%;
+  position: absolute;
+  top: 5em;
+  background-image: url("../images/baner-noiva.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center; }
+  .baner:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); }
+  .baner .texto-apresentacao {
+    width: 100%;
+    position: absolute;
+    top: 2em;
+    box-sizing: border-box;
+    padding: .8em;
+    color: #fff;
+    font-size: 1.5em; }
+  .baner .redes-sociais {
+    position: absolute;
+    top: 18em; }
+    .baner .redes-sociais ul li {
+      display: inline;
+      background-color: #fff; }
 
 /*# sourceMappingURL=estilos.css.map */
