@@ -1,6 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+.cabecalho, .menu ul, .baner .texto-apresentacao, .baner .redes-sociais a {
+  box-sizing: border-box; }
+
 .cabecalho, .menu, .baner .texto-apresentacao, .baner .redes-sociais {
   z-index: 999; }
+
+.baner .redes-sociais a {
+  -o-border-radius: 100%;
+  border-radius: 100%; }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -396,6 +403,7 @@ template {
 /*-----------------------CSS geral-----------------------*/
 body {
   background-color: #f2f2f2;
+  color: #48524f;
   font-family: 'Josefin Sans', sans-serif; }
 
 img {
@@ -406,7 +414,6 @@ img {
   height: 5em;
   position: fixed;
   padding: 1em;
-  box-sizing: border-box;
   background-color: #ffb700; }
   .cabecalho .logo {
     width: 70%;
@@ -449,8 +456,7 @@ img {
   right: -70%;
   background-color: #48524f; }
   .menu ul {
-    list-style: none;
-    box-sizing: border-box; }
+    list-style: none; }
     .menu ul li {
       padding: .7em; }
       .menu ul li a {
@@ -483,15 +489,17 @@ img {
     width: 100%;
     position: absolute;
     top: 2em;
-    box-sizing: border-box;
     padding: .8em;
     color: #fff;
     font-size: 1.5em; }
   .baner .redes-sociais {
     position: absolute;
-    top: 18em; }
-    .baner .redes-sociais ul li {
-      display: inline;
-      background-color: #fff; }
+    top: 20em;
+    width: 80%;
+    margin-left: 10%; }
+    .baner .redes-sociais a {
+      padding: 1em 1.2em;
+      background-color: #fff;
+      font-size: 1em; }
 
 /*# sourceMappingURL=estilos.css.map */

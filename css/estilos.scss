@@ -8,6 +8,7 @@
 /*-----------------------CSS geral-----------------------*/
 body{
 	background-color: $cor-bg-site;
+	color: $cinza-escuro-padrao;
 	font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -21,7 +22,7 @@ img{
 	position: fixed;
 	@extend %z-index-999;
 	padding: 1em;
-	box-sizing: border-box;
+	@extend %box-sizing;
 	background-color: $amarelo-padrao;
 	.logo{
 		width: 70%;
@@ -77,7 +78,7 @@ img{
 
 	ul{
 		list-style: none;
-		box-sizing: border-box;
+		@extend %box-sizing;
 
 		li{
 			padding: .7em;
@@ -122,7 +123,7 @@ img{
 		position: absolute;
 		top: 2em;
 		@extend %z-index-999;
-		box-sizing: border-box;
+		@extend %box-sizing;
 		padding: .8em;
 		color: $branco;
 		font-size: 1.5em;
@@ -130,12 +131,16 @@ img{
 
 	.redes-sociais{
 		position: absolute;
-		top: 18em;
+		top: 20em;
+		width: 80%;
+		margin-left: 10%;
 		@extend %z-index-999;
-
-		ul li{
-			display: inline;
-			background-color: $branco;
-		}
+			a{
+				@extend %box-sizing;
+				padding: 1em 1.2em;
+		 		background-color: $branco;
+		 		@extend %circulo;
+		 		font-size: 1em;
+			}
 	}
 }
