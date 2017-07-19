@@ -31,15 +31,22 @@ img{
 .cabecalho .botao-menu{
 	width: 28%;
 	display: inline-block;
-	position: absolute;
-	right: 0;
 }
+
 .cabecalho .abrir-menu{
-	height: 0;
-	width: 4em;
 	background-color: transparent;
-	padding-top: .5em;
-	border-top: 1.5em double #fff;
-	border-bottom: .5em solid #fff;
-	text-indent: -9999px;
+	border: none;
+	position: absolute;
+	right: 1.5em;
+	top: 1.1em;
 }
+
+.cabecalho .abrir-menu:after{
+	content: '\f0c9';
+	font-family: FontAwesome;
+	font-size: 2em;
+	color: $cor-bg-site;
+	width: 100px;
+	height: 100px;
+}
+
