@@ -1,12 +1,12 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
-.cabecalho, .menu, .menu ul, .baner .texto-apresentacao, .baner .redes-sociais a, .servicos .servico, .fotos-destaque-inicio ul, .fotos-destaque-inicio ul li:last-child, .depoimentos .titulo, .depoimentos .depoimento-unico {
+.cabecalho, .menu, .menu ul, .baner .texto-apresentacao, .redes-sociais a, .servicos .servico, .fotos-destaque-inicio ul, .fotos-destaque-inicio ul li:last-child, .depoimentos .titulo, .depoimentos .depoimento-unico, .rodape {
   box-sizing: border-box; }
 
-.menu, .baner .texto-apresentacao, .baner .redes-sociais, .baner .seta-baixo {
+.menu, .baner .texto-apresentacao, .baner .seta-baixo, .redes-sociais {
   z-index: 999; }
 
-.baner .redes-sociais a, .servicos .servico img, .depoimentos .depoimento-unico img, .depoimentos .depoimento-unico nav ul li {
+.redes-sociais a, .servicos .servico img, .depoimentos .depoimento-unico img, .depoimentos .depoimento-unico nav ul li {
   -o-border-radius: 100%;
   border-radius: 100%; }
 
@@ -511,13 +511,6 @@ OBS: Menu com right negativo para fica escondido na lateral*/
     padding: .8em;
     color: #fff;
     font-size: 1.5em; }
-  .baner .redes-sociais {
-    width: 100%; }
-    .baner .redes-sociais a {
-      padding: 1em 1.3em;
-      background-color: #fff;
-      font-size: 1.1em;
-      margin: .3em; }
   .baner .seta-baixo {
     display: flex;
     flex-direction: column;
@@ -529,6 +522,14 @@ OBS: Menu com right negativo para fica escondido na lateral*/
     -webkit-animation: seta-baixo 1s linear infinite alternate; }
     .baner .seta-baixo:hover {
       -webkit-animation: paused; }
+
+.redes-sociais {
+  width: 100%; }
+  .redes-sociais a {
+    padding: 1em 1.3em;
+    background-color: #fff;
+    font-size: 1.1em;
+    margin: .3em; }
 
 /*----------------------Fim do baner----------------------*/
 /*----------------------Servi├ºos do inicio do site----------------------*/
@@ -577,6 +578,8 @@ OBS: Menu com right negativo para fica escondido na lateral*/
           font-size: 1.5em;
           color: #fff; }
 
+/*----------------------Fim das fotos em destaque----------------------*/
+/*----------------------Inicio dos depoimentos----------------------*/
 .depoimentos {
   margin-top: -1em; }
   .depoimentos .titulo {
@@ -614,5 +617,22 @@ OBS: Menu com right negativo para fica escondido na lateral*/
         margin: .5em; }
         .depoimentos .depoimento-unico nav ul li:last-child {
           background-color: #02a8f3; }
+
+/*----------------------Fim dos depoimentos----------------------*/
+/*----------------------Rodap├®----------------------*/
+.rodape {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #48524f;
+  padding: 2em 1em 0 1em;
+  text-align: center; }
+  .rodape p {
+    color: #fff;
+    padding: 1.5em 0 0 0; }
+    .rodape p a {
+      color: #fff;
+      text-decoration: none; }
 
 /*# sourceMappingURL=estilos.css.map */

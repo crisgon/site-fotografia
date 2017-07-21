@@ -148,19 +148,6 @@ OBS: Menu com right negativo para fica escondido na lateral*/
 		font-size: 1.5em;
 	}
 
-	.redes-sociais{
-		width: 100%;
-		@extend %z-index-999;
-			a{
-				@extend %box-sizing;
-				padding: 1em 1.3em;
-		 		background-color: $branco;
-		 		@extend %circulo;
-		 		font-size: 1.1em;
-		 		margin: .3em;
-			}
-	}
-
 	.seta-baixo{
 		display: flex;
 		flex-direction: column;
@@ -177,6 +164,20 @@ OBS: Menu com right negativo para fica escondido na lateral*/
 		}
 	}
 }
+
+.redes-sociais{
+	width: 100%;
+	@extend %z-index-999;
+		a{
+			@extend %box-sizing;
+			padding: 1em 1.3em;
+ 			background-color: $branco;
+ 			@extend %circulo;
+ 			font-size: 1.1em;
+ 			margin: .3em;
+ 		}
+}
+
 /*----------------------Fim do baner----------------------*/
 
 /*----------------------Serviços do inicio do site----------------------*/
@@ -242,7 +243,9 @@ OBS: Menu com right negativo para fica escondido na lateral*/
 		}
 	}
 }
+/*----------------------Fim das fotos em destaque----------------------*/
 
+/*----------------------Inicio dos depoimentos----------------------*/
 .depoimentos{
 	margin-top: -1em;
 	.titulo{
@@ -296,6 +299,29 @@ OBS: Menu com right negativo para fica escondido na lateral*/
 					}
 				}
 			}
+		}
+	}
+}
+
+/*----------------------Fim dos depoimentos----------------------*/
+
+/*----------------------Rodapé----------------------*/
+
+.rodape{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	background-color: $cinza-escuro-padrao;
+	@extend %box-sizing;
+	padding: 2em 1em 0 1em;
+	text-align: center;
+	p{
+		color: $branco;
+		padding: 1.5em 0 0 0;
+		a{
+			color: $branco;
+			text-decoration: none;
 		}
 	}
 }
