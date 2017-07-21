@@ -5,7 +5,7 @@
 .menu, .baner .texto-apresentacao, .baner .redes-sociais, .baner .seta-baixo {
   z-index: 999; }
 
-.baner .redes-sociais a {
+.baner .redes-sociais a, .servicos .servico img {
   -o-border-radius: 100%;
   border-radius: 100%; }
 
@@ -405,7 +405,7 @@ template {
   from {
     top: 2em; }
   to {
-    top: 2.3em; } }
+    top: 2.1em; } }
 /*-----------------------CSS geral-----------------------*/
 body {
   background-color: #f2f2f2;
@@ -456,6 +456,7 @@ img {
       width: 6.25em;
       height: 6.25em; }
 
+/*Menu com right negativo para fica escondido na lateral*/
 .menu {
   width: 70%;
   height: 100%;
@@ -504,9 +505,10 @@ img {
   .baner .redes-sociais {
     width: 100%; }
     .baner .redes-sociais a {
-      padding: 1em 1.2em;
+      padding: 1em 1.3em;
       background-color: #fff;
-      font-size: 1.1em; }
+      font-size: 1.1em;
+      margin: .3em; }
   .baner .seta-baixo {
     display: flex;
     flex-direction: column;
@@ -516,14 +518,23 @@ img {
     text-decoration: none;
     color: #fff;
     -webkit-animation: seta-baixo 1s linear infinite alternate; }
+    .baner .seta-baixo:hover {
+      -webkit-animation: paused; }
 
 .servicos .servico {
   width: 100%;
-  padding: .5em;
+  padding: 1em;
   display: flex;
   flex-direction: column;
   align-items: center; }
   .servicos .servico img {
-    width: 30%; }
+    width: 30%;
+    background-color: #fff;
+    padding: 1em; }
+  .servicos .servico a {
+    font-size: 3.5em;
+    color: #02a8f3; }
+    .servicos .servico a:hover, .servicos .servico a focus {
+      color: #48524f; }
 
 /*# sourceMappingURL=estilos.css.map */

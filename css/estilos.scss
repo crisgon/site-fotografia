@@ -5,7 +5,7 @@
 
 @keyframes seta-baixo{
 	from{top: 2em;}
-	to{top: 2.3em;}
+	to{top: 2.1em;}
 }
 
 /*-----------------------CSS geral-----------------------*/
@@ -21,7 +21,6 @@ img{
 }
 .main{
 	width: 100%;
-
 }
 
 .cabecalho{
@@ -76,6 +75,7 @@ img{
 
 }
 
+/*Menu com right negativo para fica escondido na lateral*/
 .menu{
 	width: 70%;
 	height: 100%;
@@ -141,16 +141,15 @@ img{
 	}
 
 	.redes-sociais{
-	
 		width: 100%;
-	
 		@extend %z-index-999;
 			a{
 				@extend %box-sizing;
-				padding: 1em 1.2em;
+				padding: 1em 1.3em;
 		 		background-color: $branco;
 		 		@extend %circulo;
 		 		font-size: 1.1em;
+		 		margin: .3em;
 			}
 	}
 
@@ -164,6 +163,10 @@ img{
 		color: $branco;
 		@extend %z-index-999;
 		-webkit-animation: seta-baixo 1s linear infinite alternate;
+
+		&:hover{
+			-webkit-animation: paused;
+		}
 	}
 }
 
@@ -171,13 +174,26 @@ img{
 	.servico{
 		width: 100%;
 		@extend %box-sizing;
-		padding: .5em;
+		padding: 1em;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		
 		img{
 			width: 30%;
-
+			@extend %circulo;
+			background-color: $branco;
+			padding: 1em;
 		}
+		
+		a{
+			font-size: 3.5em;
+			color: $azul-padrao;
+
+			&:hover, focus{
+				color: $cinza-escuro-padrao;
+			}
+		}
+
 	}
 }
