@@ -1,12 +1,12 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
-.cabecalho, .menu, .menu ul, .baner .texto-apresentacao, .baner .redes-sociais a, .servicos .servico, .fotos-destaque-inicio ul, .fotos-destaque-inicio ul li:last-child {
+.cabecalho, .menu, .menu ul, .baner .texto-apresentacao, .baner .redes-sociais a, .servicos .servico, .fotos-destaque-inicio ul, .fotos-destaque-inicio ul li:last-child, .depoimentos .titulo, .depoimentos .depoimento-unico {
   box-sizing: border-box; }
 
 .menu, .baner .texto-apresentacao, .baner .redes-sociais, .baner .seta-baixo {
   z-index: 999; }
 
-.baner .redes-sociais a, .servicos .servico img {
+.baner .redes-sociais a, .servicos .servico img, .depoimentos .depoimento-unico img, .depoimentos .depoimento-unico nav ul li {
   -o-border-radius: 100%;
   border-radius: 100%; }
 
@@ -576,5 +576,43 @@ OBS: Menu com right negativo para fica escondido na lateral*/
         .fotos-destaque-inicio ul li:last-child a {
           font-size: 1.5em;
           color: #fff; }
+
+.depoimentos {
+  margin-top: -1em; }
+  .depoimentos .titulo {
+    width: 100%;
+    background-color: #ffb700;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    padding: 1em; }
+    .depoimentos .titulo i {
+      font-size: 2.5em; }
+  .depoimentos .depoimento-unico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    text-align: center;
+    font-size: 1.1em; }
+    .depoimentos .depoimento-unico img {
+      width: 30%; }
+    .depoimentos .depoimento-unico cite {
+      font-weight: bolder;
+      padding: .2em; }
+    .depoimentos .depoimento-unico nav ul {
+      display: flex;
+      padding: .01em;
+      list-style: none; }
+      .depoimentos .depoimento-unico nav ul li {
+        background-color: #48524f;
+        color: transparent;
+        width: 1em;
+        height: 1em;
+        margin: .5em; }
+        .depoimentos .depoimento-unico nav ul li:last-child {
+          background-color: #02a8f3; }
 
 /*# sourceMappingURL=estilos.css.map */

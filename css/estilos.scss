@@ -242,3 +242,60 @@ OBS: Menu com right negativo para fica escondido na lateral*/
 		}
 	}
 }
+
+.depoimentos{
+	margin-top: -1em;
+	.titulo{
+		width: 100%;
+		background-color: $amarelo-padrao;
+		color: $branco;
+		text-align: center;
+		font-size: 1.5em;
+		display: flex;
+		flex-direction: column;
+		@extend %box-sizing;
+		padding: 1em;
+
+		i{
+			font-size: 2.5em;
+		}
+	}
+
+	.depoimento-unico{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@extend %box-sizing;
+		padding: 1em;
+		text-align: center;
+		font-size: 1.1em;
+		img{
+			width: 30%;
+			@extend %circulo;
+		}
+		cite{
+			font-weight: bolder;
+			padding: .2em;
+		}
+
+		nav{
+			ul{
+				display: flex;
+				padding: .01em;
+				list-style: none;
+				li{
+					background-color: $cinza-escuro-padrao;
+					color: transparent;
+					@extend %circulo;					
+					width: 1em;
+					height: 1em;
+					margin: .5em;
+
+					&:last-child{
+						background-color: $azul-padrao;
+					}
+				}
+			}
+		}
+	}
+}
