@@ -167,3 +167,17 @@ img{
 	}
 }
 
+.servicos{
+	.servico{
+		width: 100%;
+		@extend %box-sizing;
+		padding: .5em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		img{
+			width: 30%;
+
+		}
+	}
+}
