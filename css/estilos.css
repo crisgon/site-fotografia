@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
-.cabecalho, .menu, .menu ul, .baner .texto-apresentacao, .baner .redes-sociais a, .servicos .servico, .fotos-destaque-inicio ul {
+.cabecalho, .menu, .menu ul, .baner .texto-apresentacao, .baner .redes-sociais a, .servicos .servico, .fotos-destaque-inicio ul, .fotos-destaque-inicio ul li:last-child {
   box-sizing: border-box; }
 
 .menu, .baner .texto-apresentacao, .baner .redes-sociais, .baner .seta-baixo {
@@ -556,8 +556,25 @@ OBS: Menu com right negativo para fica escondido na lateral*/
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1em; }
+    padding: .001em;
+    /*Sem o padding n alinhava ao centro, mas n queria q ficasse separado da borda, ent├úo coloquei esse padding pequeno.*/ }
     .fotos-destaque-inicio ul li {
-      list-style: none; }
+      list-style: none;
+      text-align: center;
+      width: 100%;
+      margin-bottom: -.25em;
+      /*Deixar as fotos juntas*/ }
+      .fotos-destaque-inicio ul li:last-child {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #48524f;
+        color: #fff;
+        padding: 2em;
+        font-size: 2em;
+        margin-bottom: 0; }
+        .fotos-destaque-inicio ul li:last-child a {
+          font-size: 1.5em;
+          color: #fff; }
 
 /*# sourceMappingURL=estilos.css.map */
