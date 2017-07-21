@@ -1,5 +1,6 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
-.cabecalho, .menu, .menu ul, .baner .texto-apresentacao, .baner .redes-sociais a, .servicos .servico {
+.cabecalho, .menu, .menu ul, .baner .texto-apresentacao, .baner .redes-sociais a, .servicos .servico, .fotos-destaque-inicio ul {
   box-sizing: border-box; }
 
 .menu, .baner .texto-apresentacao, .baner .redes-sociais, .baner .seta-baixo {
@@ -406,7 +407,10 @@ template {
     top: 2em; }
   to {
     top: 2.1em; } }
-/*-----------------------CSS geral-----------------------*/
+/*
+-------------------------CSS Index-----------------------
+---------------------------------------------------------
+*/
 body {
   background-color: #f2f2f2;
   color: #48524f;
@@ -419,6 +423,7 @@ img {
 .main {
   width: 100%; }
 
+/*----------------------Cabe├ºalho----------------------*/
 .cabecalho {
   width: 100%;
   height: 5em;
@@ -456,7 +461,9 @@ img {
       width: 6.25em;
       height: 6.25em; }
 
-/*Menu com right negativo para fica escondido na lateral*/
+/*----------------------Fim do cabe├ºalho----------------------*/
+/*----------------------Menu----------------------
+OBS: Menu com right negativo para fica escondido na lateral*/
 .menu {
   width: 70%;
   height: 100%;
@@ -478,6 +485,8 @@ img {
         .menu ul li a:hover, .menu ul li a focus {
           border-color: #fff; }
 
+/*----------------------Fim do menu----------------------*/
+/*----------------------Baner inicial----------------------*/
 .baner {
   width: 100%;
   height: 100%;
@@ -521,6 +530,8 @@ img {
     .baner .seta-baixo:hover {
       -webkit-animation: paused; }
 
+/*----------------------Fim do baner----------------------*/
+/*----------------------Servi├ºos do inicio do site----------------------*/
 .servicos .servico {
   width: 100%;
   padding: 1em;
@@ -536,5 +547,17 @@ img {
     color: #02a8f3; }
     .servicos .servico a:hover, .servicos .servico a focus {
       color: #48524f; }
+
+/*----------------------Fim dos servi├ºos----------------------*/
+/*----------------------Inicio das fotos em destaque----------------------*/
+.fotos-destaque-inicio {
+  width: 100%; }
+  .fotos-destaque-inicio ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em; }
+    .fotos-destaque-inicio ul li {
+      list-style: none; }
 
 /*# sourceMappingURL=estilos.css.map */
