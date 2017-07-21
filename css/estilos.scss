@@ -3,13 +3,17 @@
 @import 'helpers/mixins-placeholders';
 @import 'base/normalize';
 
-
+@keyframes seta-baixo{
+	from{top: 2em;}
+	to{top: 2.3em;}
+}
 
 /*-----------------------CSS geral-----------------------*/
 body{
 	background-color: $cor-bg-site;
 	color: $cinza-escuro-padrao;
 	font-family: 'Josefin Sans', sans-serif;
+	height: 100%;
 }
 
 img{
@@ -27,7 +31,7 @@ img{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	@extend %z-index-999;
+	z-index: 9999;
 	padding: 1em;
 	@extend %box-sizing;
 	background-color: $amarelo-padrao;
@@ -50,7 +54,7 @@ img{
 			content: '\f0c9';
 			font-family: FontAwesome;
 			font-size: 2em;
-			color: $cor-bg-site;
+			color:$branco;
 			width: 6.25em;
 			height: 6.25em;
 		}
@@ -107,12 +111,14 @@ img{
 
 .baner{
 	width: 100%;
-	height: 70%;
-	
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	background-image: url("../images/baner-noiva.jpg");
 	background-color: $cinza-escuro-padrao;
 	background-size: cover;
-	background-position: center;
+	background-position: center center;
 	text-align: center;
 
 	&:after{
@@ -126,8 +132,7 @@ img{
 	}
 
 	.texto-apresentacao{
-		width: 100%;
-	
+		width: 100%;	
 		@extend %z-index-999;
 		@extend %box-sizing;
 		padding: .8em;
@@ -137,7 +142,7 @@ img{
 
 	.redes-sociais{
 	
-		width: 80%;
+		width: 100%;
 	
 		@extend %z-index-999;
 			a{
@@ -145,8 +150,20 @@ img{
 				padding: 1em 1.2em;
 		 		background-color: $branco;
 		 		@extend %circulo;
-		 		font-size: 1em;
+		 		font-size: 1.1em;
 			}
+	}
+
+	.seta-baixo{
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		top: 2em;
+		font-size: 3em;
+		text-decoration: none;
+		color: $branco;
+		@extend %z-index-999;
+		-webkit-animation: seta-baixo 1s linear infinite alternate;
 	}
 }
 
