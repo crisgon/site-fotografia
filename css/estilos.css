@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
-.cabecalho, .menu ul, .baner .texto-apresentacao, .baner .redes-sociais a {
+.cabecalho, .menu, .menu ul, .baner .texto-apresentacao, .baner .redes-sociais a {
   box-sizing: border-box; }
 
 .cabecalho, .menu, .baner .texto-apresentacao, .baner .redes-sociais {
@@ -409,24 +409,27 @@ body {
 img {
   max-width: 100%; }
 
+.main {
+  width: 100%; }
+
 .cabecalho {
   width: 100%;
   height: 5em;
   position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1em;
   background-color: #ffb700; }
   .cabecalho .logo {
-    width: 70%;
-    display: inline-block; }
+    width: 70%; }
   .cabecalho .botao-menu {
-    width: 28%;
-    display: inline-block; }
+    width: 20%;
+    display: flex;
+    justify-content: flex-end; }
   .cabecalho .abrir-menu {
     background-color: transparent;
-    border: none;
-    position: absolute;
-    right: 1.5em;
-    top: 1.1em; }
+    border: none; }
     .cabecalho .abrir-menu:after {
       content: '\f0c9';
       font-family: FontAwesome;
@@ -436,10 +439,7 @@ img {
       height: 6.25em; }
   .cabecalho .fechar-menu {
     background-color: transparent;
-    border: none;
-    position: absolute;
-    top: .2em;
-    right: 1.5em; }
+    border: none; }
     .cabecalho .fechar-menu:after {
       content: '\f00d';
       font-family: FontAwesome;
@@ -454,6 +454,7 @@ img {
   position: fixed;
   top: 0;
   right: -70%;
+  padding: 1em;
   background-color: #48524f; }
   .menu ul {
     list-style: none; }
@@ -471,9 +472,8 @@ img {
 .baner {
   width: 100%;
   height: 70%;
-  position: absolute;
-  top: 5em;
   background-image: url("../images/baner-noiva.jpg");
+  background-color: #48524f;
   background-size: cover;
   background-position: center;
   text-align: center; }
@@ -487,16 +487,11 @@ img {
     background-color: rgba(0, 0, 0, 0.5); }
   .baner .texto-apresentacao {
     width: 100%;
-    position: absolute;
-    top: 2em;
     padding: .8em;
     color: #fff;
     font-size: 1.5em; }
   .baner .redes-sociais {
-    position: absolute;
-    top: 20em;
-    width: 80%;
-    margin-left: 10%; }
+    width: 80%; }
     .baner .redes-sociais a {
       padding: 1em 1.2em;
       background-color: #fff;
