@@ -93,7 +93,7 @@ OBS: Menu com right negativo para fica escondido na lateral*/
 	height: 100%;
 	position: fixed;
 	top: 0;
-	right: -70%;
+	right: 0;
 	padding: 1em;
 	@extend %box-sizing;
 	@extend %z-index-999;
@@ -409,6 +409,8 @@ OBS: Menu com right negativo para fica escondido na lateral*/
 			li{
 				width: 33.333%;
 				&:last-child{
+					display: flex;
+					align-items: center;
 					width: 33.333%;
 					font-size: 1.5em;
 				}
@@ -434,3 +436,43 @@ OBS: Menu com right negativo para fica escondido na lateral*/
 	}
 }
 
+@media(min-width: 960px){
+	.fotos-destaque-inicio{
+		ul{
+			li{
+				&:last-child{
+					font-size: 1.8em;
+				}
+			}
+		}
+	}
+}
+
+@media(min-width: 1100px){
+	.fotos-destaque-inicio{
+		ul{
+			li{
+				&:last-child{
+					font-size: 2em;
+				}
+			}
+		}
+	}
+	.servicos{
+		.servico{
+			width: 20%;
+		}
+	}
+}	
+
+@media(min-width: 1300px){
+	.fotos-destaque-inicio{
+		ul{
+			li{
+				&:last-child{
+					font-size: 2.5em;
+				}
+			}
+		}
+	}
+}	
