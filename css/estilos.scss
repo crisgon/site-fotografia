@@ -18,6 +18,9 @@ body{
 	font-family: 'Josefin Sans', sans-serif;
 	height: 100%;
 }
+.esconder{
+	display: none;
+}
 
 img{
 	max-width: 100%;
@@ -40,6 +43,9 @@ img{
 	.logo{
 		width: 70%;
 
+		.logo-vertical{
+			display: none;
+		}
 	}
 	.botao-menu{
 		width: 20%;
@@ -99,6 +105,11 @@ OBS: Menu com right negativo para fica escondido na lateral*/
 
 		li{
 			padding: .7em;
+			text-align: center;
+
+			&:nth-child(3){
+				padding: .7em;
+			}
 
 			a{
 				color: $branco;
@@ -123,6 +134,7 @@ OBS: Menu com right negativo para fica escondido na lateral*/
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	background-image: url("../images/baner-noiva.jpg");
 	background-color: $cinza-escuro-padrao;
 	background-size: cover;
@@ -325,3 +337,100 @@ OBS: Menu com right negativo para fica escondido na lateral*/
 		}
 	}
 }
+
+/*----------------------Media Query----------------------*/
+
+@media(min-width: 768px){
+	.cabecalho{
+		position: absolute;
+		top: 2em;
+		height: 7em;
+		background-color: transparent;
+		display: flex;
+		justify-content: space-around;
+
+	.logo{
+		display: none;
+
+		}
+		.botao-menu{
+			display: none;
+		}
+
+		.menu{
+			position: relative;
+			right: 0;
+			display: flex;
+			justify-content: space-between;
+			background-color: transparent;
+			ul{
+				flex-basis: 100%;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				
+				li:nth-child(3){
+						padding: 0;
+					.logo-vertical{
+						width: 60%;
+					}
+				}
+			}
+			.fechar-menu{
+				display: none;
+			}
+		}
+	}
+
+	.baner{
+		justify-content: center;
+		 .texto-apresentacao{
+				width: 70%;
+				padding: 2em;
+			}
+	}
+
+	.servicos{
+		padding-top: 4em;
+		text-align: center;
+		display: flex;
+		flex-wrap: wrap;
+		.servico{
+			width: 33.333%;
+		}
+	}
+
+	.fotos-destaque-inicio{
+		ul{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			align-items: stretch;
+			li{
+				width: 33.333%;
+				&:last-child{
+					width: 33.333%;
+					font-size: 1.5em;
+				}
+			}
+		}
+	}
+
+	.depoimentos{
+		display: flex;
+		flex-direction: row;
+			.titulo{
+				justify-content: center;
+				font-size: 1.3em;
+				width: 50%;
+			}
+			.depoimento-unico{
+				width: 50%;
+			}		
+	}
+
+	.rodape{
+		padding: 5em 0 0 0;
+	}
+}
+

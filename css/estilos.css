@@ -417,6 +417,9 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   height: 100%; }
 
+.esconder {
+  display: none; }
+
 img {
   max-width: 100%; }
 
@@ -436,6 +439,8 @@ img {
   background-color: #ffb700; }
   .cabecalho .logo {
     width: 70%; }
+    .cabecalho .logo .logo-vertical {
+      display: none; }
   .cabecalho .botao-menu {
     width: 20%;
     display: flex;
@@ -475,7 +480,10 @@ OBS: Menu com right negativo para fica escondido na lateral*/
   .menu ul {
     list-style: none; }
     .menu ul li {
-      padding: .7em; }
+      padding: .7em;
+      text-align: center; }
+      .menu ul li:nth-child(3) {
+        padding: .7em; }
       .menu ul li a {
         color: #fff;
         text-decoration: none;
@@ -493,6 +501,7 @@ OBS: Menu com right negativo para fica escondido na lateral*/
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-image: url("../images/baner-noiva.jpg");
   background-color: #48524f;
   background-size: cover;
@@ -634,5 +643,74 @@ OBS: Menu com right negativo para fica escondido na lateral*/
     .rodape p a {
       color: #fff;
       text-decoration: none; }
+
+/*----------------------Media Query----------------------*/
+@media (min-width: 768px) {
+  .cabecalho {
+    position: absolute;
+    top: 2em;
+    height: 7em;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around; }
+    .cabecalho .logo {
+      display: none; }
+    .cabecalho .botao-menu {
+      display: none; }
+    .cabecalho .menu {
+      position: relative;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      background-color: transparent; }
+      .cabecalho .menu ul {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center; }
+        .cabecalho .menu ul li:nth-child(3) {
+          padding: 0; }
+          .cabecalho .menu ul li:nth-child(3) .logo-vertical {
+            width: 60%; }
+      .cabecalho .menu .fechar-menu {
+        display: none; }
+
+  .baner {
+    justify-content: center; }
+    .baner .texto-apresentacao {
+      width: 70%;
+      padding: 2em; }
+
+  .servicos {
+    padding-top: 4em;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap; }
+    .servicos .servico {
+      width: 33.333%; }
+
+  .fotos-destaque-inicio ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch; }
+    .fotos-destaque-inicio ul li {
+      width: 33.333%; }
+      .fotos-destaque-inicio ul li:last-child {
+        width: 33.333%;
+        font-size: 1.5em; }
+
+  .depoimentos {
+    display: flex;
+    flex-direction: row; }
+    .depoimentos .titulo {
+      justify-content: center;
+      font-size: 1.3em;
+      width: 50%; }
+    .depoimentos .depoimento-unico {
+      width: 50%; }
+
+  .rodape {
+    padding: 5em 0 0 0; } }
 
 /*# sourceMappingURL=estilos.css.map */
