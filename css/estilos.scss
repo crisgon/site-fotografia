@@ -196,6 +196,8 @@ OBS: Menu com right negativo para fica escondido na lateral*/
 
 /*----------------------Serviços do inicio do site----------------------*/
 .servicos{
+	display: flex;
+	flex-direction: column;
 	.servico{
 		width: 100%;
 		@extend %box-sizing;
@@ -345,6 +347,13 @@ OBS: Menu com right negativo para fica escondido na lateral*/
 @media(min-width: 500px){
 	.cabecalho{
 		.logo{
+			width: 50%;
+		}
+	}
+	.servicos{
+		flex-direction: row;
+		flex-wrap: wrap;
+		.servico{
 			width: 50%;
 		}
 	}
