@@ -556,6 +556,8 @@ OBS: Menu com right negativo para fica escondido na lateral*/
       width: 30%;
       background-color: #fff;
       padding: 1em; }
+    .servicos .servico h2 {
+      flex-grow: 2; }
     .servicos .servico a {
       font-size: 3.5em;
       color: #02a8f3; }
@@ -567,6 +569,7 @@ OBS: Menu com right negativo para fica escondido na lateral*/
 .fotos-destaque-inicio {
   width: 100%; }
   .fotos-destaque-inicio ul {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -578,13 +581,37 @@ OBS: Menu com right negativo para fica escondido na lateral*/
       width: 100%;
       margin-bottom: -.25em;
       /*Deixar as fotos juntas*/ }
+      .fotos-destaque-inicio ul li figure {
+        width: 100%;
+        max-height: 300px;
+        margin: 0;
+        position: relative;
+        text-align: center;
+        overflow: hidden; }
+        .fotos-destaque-inicio ul li figure img {
+          transition: 2s;
+          -webkit-filter: grayscale(0); }
+          .fotos-destaque-inicio ul li figure img:hover {
+            -webkit-filter: grayscale(100%);
+            -webkit-transform: scale(1.5) rotate(15deg); }
+          .fotos-destaque-inicio ul li figure img:hover + figcaption {
+            margin-left: 0; }
+        .fotos-destaque-inicio ul li figure figcaption {
+          transition: 1s;
+          position: absolute;
+          bottom: 10px;
+          padding: 10px;
+          color: #fff;
+          font-weight: bolder;
+          margin-left: -100%;
+          background-color: #48524f; }
       .fotos-destaque-inicio ul li:last-child {
         display: flex;
         flex-direction: column;
         width: 100%;
         background-color: #48524f;
         color: #fff;
-        padding: 2em;
+        padding: 2.31em;
         font-size: 2em;
         margin-bottom: 0; }
         .fotos-destaque-inicio ul li:last-child a {

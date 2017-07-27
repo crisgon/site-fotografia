@@ -212,6 +212,10 @@ OBS: Menu com right negativo para fica escondido na lateral*/
 			background-color: $branco;
 			padding: 1em;
 		}
+
+		h2{
+			flex-grow: 2;
+		}
 		
 		a{
 			font-size: 3.5em;
@@ -230,6 +234,7 @@ OBS: Menu com right negativo para fica escondido na lateral*/
 .fotos-destaque-inicio{
 	width: 100%;
 	ul{
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -240,7 +245,47 @@ OBS: Menu com right negativo para fica escondido na lateral*/
 			text-align: center;
 			width: 100%;
 			margin-bottom: -.25em; /*Deixar as fotos juntas*/
+			figure{
+				width: 100%;
+				max-height: 300px;
+				margin: 0;
+				position: relative;
+				text-align: center;
+				overflow: hidden;				
+				img{
+					transition: 2s;
+					-webkit-filter: grayscale(0);
+					&:hover{
+						-webkit-filter: grayscale(100%);
+						-webkit-transform: scale(1.5) rotate(15deg);						
+					}
+					&:hover+figcaption{
+						margin-left: 0;
+					}
+				}
+				figcaption{
+					transition: 1s;
+					position: absolute;
+					bottom: 10px;
+					padding: 10px;
+					color: $branco;
+					font-weight: bolder;
+					margin-left: -100%;
+					background-color: $cinza-escuro-padrao;
+				}
+			}
+			// img{
+			// 	-webkit-filter: grayscale(100%);
+			// 	filter: grayscale(100%);
+			// 	-webkit-transition: .3s ease-in-out;
+			// 	transition: .3s ease-in-out;
 
+			// 	&:hover{
+			// 		filter: grayscale(0);
+			// 	}
+			// }
+
+		
 			&:last-child{
 				display: flex;
 				flex-direction: column;
@@ -248,9 +293,10 @@ OBS: Menu com right negativo para fica escondido na lateral*/
 				background-color: $cinza-escuro-padrao;
 				color: $branco;
 				@extend %box-sizing;
-				padding: 2em;
+				padding: 2.31em;
 				font-size: 2em;
 				margin-bottom: 0;
+
 				a{
 					font-size: 1.5em;
 					color: $branco;
