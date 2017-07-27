@@ -439,8 +439,6 @@ img {
   background-color: #ffb700; }
   .cabecalho .logo {
     width: 70%; }
-    .cabecalho .logo .logo-vertical {
-      display: none; }
   .cabecalho .botao-menu {
     width: 20%;
     display: flex;
@@ -474,14 +472,14 @@ OBS: Menu com right negativo para fica escondido na lateral*/
   height: 100%;
   position: fixed;
   top: 0;
-  right: 0;
+  right: -70%;
   padding: 1em;
-  background-color: #48524f; }
+  background-color: #48524f;
+  transition: right 1s; }
   .menu ul {
     list-style: none; }
     .menu ul li {
-      padding: .7em;
-      text-align: center; }
+      padding: .7em; }
       .menu ul li:nth-child(3) {
         padding: .7em; }
       .menu ul li a {
@@ -492,6 +490,9 @@ OBS: Menu com right negativo para fica escondido na lateral*/
         transition: border 1s; }
         .menu ul li a:hover, .menu ul li a focus {
           border-color: #fff; }
+
+.menu-ativo .menu {
+  right: 0; }
 
 /*----------------------Fim do menu----------------------*/
 /*----------------------Baner inicial----------------------*/
@@ -645,7 +646,14 @@ OBS: Menu com right negativo para fica escondido na lateral*/
       text-decoration: none; }
 
 /*----------------------Media Query----------------------*/
+@media (min-width: 500px) {
+  .cabecalho .logo {
+    width: 50%; } }
 @media (min-width: 768px) {
+  .container {
+    width: 80%;
+    margin-left: 10%; }
+
   .cabecalho {
     position: absolute;
     top: 2em;
@@ -654,7 +662,7 @@ OBS: Menu com right negativo para fica escondido na lateral*/
     display: flex;
     justify-content: space-around; }
     .cabecalho .logo {
-      display: none; }
+      width: 20%; }
     .cabecalho .botao-menu {
       display: none; }
     .cabecalho .menu {

@@ -42,10 +42,6 @@ img{
 	background-color: $amarelo-padrao;
 	.logo{
 		width: 70%;
-
-		.logo-vertical{
-			display: none;
-		}
 	}
 	.botao-menu{
 		width: 20%;
@@ -93,11 +89,12 @@ OBS: Menu com right negativo para fica escondido na lateral*/
 	height: 100%;
 	position: fixed;
 	top: 0;
-	right: 0;
+	right: -70%;
 	padding: 1em;
 	@extend %box-sizing;
 	@extend %z-index-999;
 	background-color: $cinza-escuro-padrao;
+	transition: right 1s;
 
 	ul{
 		list-style: none;
@@ -105,7 +102,6 @@ OBS: Menu com right negativo para fica escondido na lateral*/
 
 		li{
 			padding: .7em;
-			text-align: center;
 
 			&:nth-child(3){
 				padding: .7em;
@@ -125,6 +121,12 @@ OBS: Menu com right negativo para fica escondido na lateral*/
 		}
 	}
 }
+
+	.menu-ativo{
+		.menu{
+			right: 0;
+		}
+	}
 /*----------------------Fim do menu----------------------*/
 
 /*----------------------Baner inicial----------------------*/
@@ -340,7 +342,19 @@ OBS: Menu com right negativo para fica escondido na lateral*/
 
 /*----------------------Media Query----------------------*/
 
+@media(min-width: 500px){
+	.cabecalho{
+		.logo{
+			width: 50%;
+		}
+	}
+}
+
 @media(min-width: 768px){
+	.container{
+		width: 80%;
+		margin-left: 10%;
+	}
 	.cabecalho{
 		position: absolute;
 		top: 2em;
@@ -350,8 +364,7 @@ OBS: Menu com right negativo para fica escondido na lateral*/
 		justify-content: space-around;
 
 	.logo{
-		display: none;
-
+		width: 20%;
 		}
 		.botao-menu{
 			display: none;
