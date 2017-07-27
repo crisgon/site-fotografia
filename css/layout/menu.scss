@@ -1,0 +1,46 @@
+/*----------------------Menu----------------------
+OBS: Menu com right negativo para fica escondido na lateral*/
+.menu{
+	width: 70%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: -70%;
+	padding: 1em;
+	@extend %box-sizing;
+	@extend %z-index-999;
+	background-color: $cinza-escuro-padrao;
+	transition: right 1s;
+
+	ul{
+		list-style: none;
+		@extend %box-sizing;
+
+		li{
+			padding: .7em;
+
+			&:nth-child(3){
+				padding: .7em;
+			}
+
+			a{
+				color: $branco;
+				text-decoration: none;
+				padding-bottom: .2em;
+				border-bottom: .125em solid transparent;
+				transition: border 1s;
+				
+				&:hover, focus{
+					border-color: $branco;
+				}
+			}
+		}
+	}
+}
+
+	.menu-ativo{
+		.menu{
+			right: 0;
+		}
+	}
+/*----------------------Fim do menu----------------------*/

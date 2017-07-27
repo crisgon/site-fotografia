@@ -1,0 +1,52 @@
+/*----------------------Cabeçalho----------------------*/
+.cabecalho{
+	width: 100%;
+	height: 5em;
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 9999;
+	padding: 1em;
+	@extend %box-sizing;
+	background-color: $amarelo-padrao;
+	.logo{
+		width: 70%;
+	}
+	.botao-menu{
+		width: 20%;
+		display: flex;
+		justify-content: flex-end;
+
+	}	
+	.abrir-menu{
+		background-color: transparent;
+		border: none;
+
+
+		&:after{
+			content: '\f0c9';
+			font-family: FontAwesome;
+			font-size: 2em;
+			color:$branco;
+			width: 6.25em;
+			height: 6.25em;
+		}
+	}
+	.fechar-menu{
+		background-color: transparent;
+		border: none;
+
+
+		&:after{
+			content: '\f00d';
+			font-family: FontAwesome;
+			font-size: 2em;
+			color: $cor-bg-site;
+			width: 6.25em;
+			height: 6.25em;
+		}
+	}
+
+}
+/*----------------------Fim do cabeçalho----------------------*/

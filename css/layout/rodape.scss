@@ -1,0 +1,33 @@
+/*----------------------Rodapé----------------------*/
+
+.rodape{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	background-color: $cinza-escuro-padrao;
+	@extend %box-sizing;
+	padding: 2em 1em 0 1em;
+	text-align: center;
+	p{
+		color: $branco;
+		padding: 1.5em 0 0 0;
+		a{
+			color: $branco;
+			text-decoration: none;
+		}
+	}
+	.redes-sociais{
+		width: 100%;
+		@extend %z-index-999;
+			a{
+				@extend %box-sizing;
+				padding: 1em 1.3em;
+	 			background-color: $branco;
+	 			@extend %circulo;
+	 			font-size: 1.1em;
+	 			margin: .3em;
+	 		}
+}
+
+}

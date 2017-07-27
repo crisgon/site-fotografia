@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import 'helpers/variaveis';
+@import 'helpers/mixins-placeholders';
+@import 'base/normalize';
+@import 'layout/geral';
+@import 'layout/cabecalho';
+@import 'layout/menu';
+@import 'layout/rodape';
+@import 'helpers/media-query';
+
+
+.titulo-principal{
+	width: 100%;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;	
+	@extend %box-sizing;
+	padding: 2em;
+	margin-bottom: 6em;
+	background-color: $amarelo-padrao;
+	h1{
+		font-size: 3em;
+		color: $branco;
+		position: relative;
+		top: 1.5em;
+	}
+
+	figure{
+		position: relative;
+		top: 4em;
+		img{
+			@extend %circulo;
+			width: 150px;
+			height: 150px;
+		}
+		
+	}
+}
+
+.sobre{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	@extend %box-sizing;
+	padding: 1em;
+}
+
