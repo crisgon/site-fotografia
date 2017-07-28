@@ -10,23 +10,6 @@
 
 
 .titulo-principal{
-	width: 100%;
-	height: 300px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;	
-	@extend %box-sizing;
-	padding: 2em;
-	margin-bottom: 6em;
-	background-color: $amarelo-padrao;
-	h1{
-		font-size: 3em;
-		color: $branco;
-		position: relative;
-		top: 1.5em;
-	}
-
 	figure{
 		position: relative;
 		top: 4em;
@@ -34,8 +17,7 @@
 			@extend %circulo;
 			width: 150px;
 			height: 150px;
-		}
-		
+		}	
 	}
 }
 
