@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import 'helpers/variaveis';
+@import 'helpers/mixins-placeholders';
+@import 'base/normalize';
+@import 'layout/geral';
+@import 'layout/cabecalho';
+@import 'layout/menu';
+@import 'layout/rodape';
+@import 'helpers/media-query';
+
+.ensaios{
+	display: flex;
+	flex-direction: column;
+	figure{
+		width: 80%;
+		margin: 0 auto;
+		overflow: hidden;
+		position: relative;
+		margin-bottom: -3em;
+		img{
+			width: 100%;
+			position: relative;
+			-webkit-filter: grayscale(100%) brightness(40%);
+			transition: filter 1s;
+			&:hover{
+				-webkit-filter: grayscale(0) brightness(100%);
+			}
+			&:hover+figcaption a{
+				opacity: 1;
+			}
+		}
+		figcaption{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			position: relative;
+			top: -5em;
+			color: #fff;
+			a{
+				color: $branco;
+				position: relative;
+				font-size: 2em;
+				opacity: 0;
+				transition: opacity 1s;
+			}	
+		}
+	}
+}
+
