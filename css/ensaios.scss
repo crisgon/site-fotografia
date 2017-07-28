@@ -7,6 +7,10 @@
 @import 'layout/rodape';
 @import 'helpers/media-query';
 
+.titulo-principal{
+	margin-bottom: -3em;
+}
+
 .ensaios{
 	display: flex;
 	flex-direction: column;
@@ -68,6 +72,9 @@
 }
 
 @media(min-width: 800px){
+	.titulo-principal{
+		margin-bottom: 6em;
+	}
 	.ensaios{
 		flex-direction: row;
 		flex-wrap: wrap;
