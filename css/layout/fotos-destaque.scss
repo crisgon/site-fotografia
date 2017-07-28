@@ -23,9 +23,9 @@
 				overflow: hidden;				
 				img{
 					transition: 2s;
-					-webkit-filter: grayscale(0);
+					-webkit-filter: grayscale(0) brightness(100%);
 					&:hover{
-						-webkit-filter: grayscale(100%);
+						-webkit-filter: grayscale(100%) brightness(40%);
 						-webkit-transform: scale(1.5) rotate(15deg);						
 					}
 					&:hover+figcaption{
@@ -40,7 +40,6 @@
 					color: $branco;
 					font-weight: bolder;
 					opacity: 0;
-					background-color: $cinza-escuro-padrao;
 				}
 			}
 		
