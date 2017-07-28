@@ -11,6 +11,7 @@
 .ensaios{
 	display: flex;
 	flex-direction: column;
+	margin-top: -3em;
 	figure{
 		width: 80%;
 		margin: 0 auto;
@@ -22,9 +23,6 @@
 			position: relative;
 			-webkit-filter: grayscale(100%) brightness(40%);
 			transition: filter 1s;
-			&:hover{
-				-webkit-filter: grayscale(0) brightness(100%);
-			}
 			&:hover+figcaption a{
 				opacity: 1;
 			}
@@ -34,12 +32,12 @@
 			flex-direction: column;
 			align-items: center;
 			position: relative;
-			top: -5em;
+			top: -6em;
 			color: #fff;
 			a{
 				color: $branco;
 				position: relative;
-				font-size: 2em;
+				font-size: 2.5em;
 				opacity: 0;
 				transition: opacity 1s;
 			}	
@@ -47,3 +45,41 @@
 	}
 }
 
+@media(min-width: 500px){
+	.ensaios{
+		figure{
+			figcaption{
+				top: -7em;
+				a{
+					font-size: 3em;
+				}
+			}
+		}
+	}
+}
+
+@media(min-width: 500px){
+	.ensaios{
+		figure{
+			figcaption{
+				font-size: 2em;
+			}
+		}
+	}
+}
+
+@media(min-width: 800px){
+	.ensaios{
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		figure{
+			width: 45%;
+
+			&:nth-child(4){
+				order: -1;
+			}
+		}
+	}
+	
+}

@@ -525,26 +525,10 @@ OBS: Menu com right negativo para fica escondido na lateral*/
       font-size: 1.1em;
       margin: .3em; }
 
-/*----------------------Media Query----------------------*/
+/*----------------------Pagina inicial e menu----------------------*/
 @media (min-width: 500px) {
   .cabecalho .logo {
-    width: 50%; }
-
-  .servicos {
-    flex-direction: row;
-    flex-wrap: wrap; }
-    .servicos .servico {
-      width: 50%; } }
-@media (min-width: 600px) {
-  .fotos-destaque-inicio ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: stretch; }
-    .fotos-destaque-inicio ul li {
-      width: 50%; }
-      .fotos-destaque-inicio ul li:last-child {
-        order: -1; } }
+    width: 50%; } }
 @media (min-width: 768px) {
   .container {
     width: 80%;
@@ -579,55 +563,12 @@ OBS: Menu com right negativo para fica escondido na lateral*/
       .cabecalho .menu .fechar-menu {
         display: none; }
 
-  .baner {
-    justify-content: center; }
-    .baner .texto-apresentacao {
-      width: 70%;
-      padding: 2em; }
-
-  .servicos {
-    padding-top: 4em;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap; }
-    .servicos .servico {
-      width: 33.333%; }
-
-  .fotos-destaque-inicio ul li {
-    width: 33.333%; }
-    .fotos-destaque-inicio ul li:last-child {
-      display: flex;
-      align-items: center;
-      width: 33.333%;
-      font-size: 1.5em; }
-
-  .depoimentos {
-    display: flex;
-    flex-direction: row; }
-    .depoimentos .titulo {
-      justify-content: center;
-      font-size: 1.3em;
-      width: 50%; }
-    .depoimentos .depoimento-unico {
-      width: 50%; }
-
   .rodape {
     padding: 5em 0 0 0; } }
-@media (min-width: 960px) {
-  .fotos-destaque-inicio ul li:last-child {
-    font-size: 1.8em; } }
-@media (min-width: 1100px) {
-  .fotos-destaque-inicio ul li:last-child {
-    font-size: 2em; }
-
-  .servicos .servico {
-    width: 20%; } }
-@media (min-width: 1300px) {
-  .fotos-destaque-inicio ul li:last-child {
-    font-size: 2.5em; } }
 .ensaios {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  margin-top: -3em; }
   .ensaios figure {
     width: 80%;
     margin: 0 auto;
@@ -639,8 +580,6 @@ OBS: Menu com right negativo para fica escondido na lateral*/
       position: relative;
       -webkit-filter: grayscale(100%) brightness(40%);
       transition: filter 1s; }
-      .ensaios figure img:hover {
-        -webkit-filter: grayscale(0) brightness(100%); }
       .ensaios figure img:hover + figcaption a {
         opacity: 1; }
     .ensaios figure figcaption {
@@ -648,13 +587,31 @@ OBS: Menu com right negativo para fica escondido na lateral*/
       flex-direction: column;
       align-items: center;
       position: relative;
-      top: -5em;
+      top: -6em;
       color: #fff; }
       .ensaios figure figcaption a {
         color: #fff;
         position: relative;
-        font-size: 2em;
+        font-size: 2.5em;
         opacity: 0;
         transition: opacity 1s; }
+
+@media (min-width: 500px) {
+  .ensaios figure figcaption {
+    top: -7em; }
+    .ensaios figure figcaption a {
+      font-size: 3em; } }
+@media (min-width: 500px) {
+  .ensaios figure figcaption {
+    font-size: 2em; } }
+@media (min-width: 800px) {
+  .ensaios {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    .ensaios figure {
+      width: 45%; }
+      .ensaios figure:nth-child(4) {
+        order: -1; } }
 
 /*# sourceMappingURL=ensaios.css.map */
