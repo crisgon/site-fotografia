@@ -5,4 +5,4 @@ Esse é um projeto sem fins lucrativos que desenvolvi para estudar SASS, FlexBox
 
 
 
-Link para acessar o site: https://goo.gl/xvnGDW
+Link para acessar o site: https://crisgon.github.io/site-fotografia
