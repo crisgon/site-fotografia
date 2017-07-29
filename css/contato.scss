@@ -1,0 +1,110 @@
+@import 'helpers/variaveis';
+@import 'helpers/mixins-placeholders';
+@import 'base/normalize';
+@import 'layout/geral';
+@import 'layout/cabecalho';
+@import 'layout/menu';
+@import 'layout/rodape';
+@import 'helpers/media-query';
+
+
+.contato{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	.endereco{
+		@extend %box-sizing;
+		padding: 1em;
+		display: flex;
+		flex-direction: column;	
+		font-style: normal;
+		font-size: 1.2em;
+		line-height: 1.2em;
+		a{
+			text-decoration: none;
+			color: $cinza-escuro-padrao;
+		}
+	}
+	.mapa{
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		iframe{
+			min-height: 300px;
+		}
+	}
+
+	.form-contato{
+		@extend %box-sizing;
+		padding: 1em;
+		fieldset{
+			border: none;
+			display: flex;
+			legend{
+				font-size: 2em;
+				padding: 1em 0;
+			}
+			label{
+				margin-bottom: .5em;
+			}
+			.borda-azul-top{
+				border: none;
+				border-top: 0.125em solid $azul-padrao;
+			}
+			.input-nome-email{
+				width: 100%;
+				margin-bottom: .5em;
+				@extend %box-sizing;
+				padding: .7em;
+				@extend .borda-azul-top;
+			}
+			#mensagem{
+				width: 98.8%;
+				@extend .borda-azul-top;
+			}
+			button{
+				background-color: $azul-padrao;
+				border: .125em solid $azul-padrao;
+				@extend %box-sizing;
+				padding: 1em;
+				margin-top: .5em;
+				color: $branco;
+				transition:  1s;
+				float: right;
+				width: 100%;
+				&:hover, focus{
+					background-color: transparent;
+					color: $cinza-escuro-padrao;
+				}
+			}
+		}
+	}
+}
+
+@media(min-width: 769px){
+	.contato{
+		flex-direction: row;
+		justify-content: space-around;
+		.endereco-mapa{
+			width: 45%;
+			.endereco{
+				padding: 0 0 1em 0;
+			}
+			.mapa{
+				height: 80%;
+			}
+		}
+		.form-contato{
+			width: 45%;
+			padding: 0;
+			fieldset{
+				legend{
+					padding: 0 0 1em 0;
+				}
+				.input-nome-email{
+					width: 98.8%;
+				}
+			}
+		}
+	}
+}

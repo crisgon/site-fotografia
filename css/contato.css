@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
-.titulo-principal, .cabecalho, .menu, .menu ul, .rodape, .rodape .redes-sociais a {
+.titulo-principal, .cabecalho, .menu, .menu ul, .rodape, .rodape .redes-sociais a, .contato .endereco, .contato .form-contato, .contato .form-contato fieldset .input-nome-email, .contato .form-contato fieldset button {
   box-sizing: border-box; }
 
 .menu, .rodape .redes-sociais {
@@ -565,59 +565,74 @@ OBS: Menu com right negativo para fica escondido na lateral*/
 
   .rodape {
     padding: 5em 0 0 0; } }
-.titulo-principal {
-  margin-bottom: -3em; }
-
-.ensaios {
+.contato {
   display: flex;
   flex-direction: column;
-  margin-top: -3em; }
-  .ensaios figure {
-    width: 80%;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-    margin-bottom: -3em; }
-    .ensaios figure img {
-      width: 100%;
-      position: relative;
-      -webkit-filter: grayscale(100%) brightness(40%);
-      transition: filter 1s; }
-      .ensaios figure img:hover + figcaption a {
-        opacity: 1; }
-    .ensaios figure figcaption {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: relative;
-      top: -6em;
-      color: #fff; }
-      .ensaios figure figcaption a {
+  width: 100%; }
+  .contato .endereco {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    font-size: 1.2em;
+    line-height: 1.2em; }
+    .contato .endereco a {
+      text-decoration: none;
+      color: #48524f; }
+  .contato .mapa {
+    display: flex;
+    justify-content: center;
+    width: 100%; }
+    .contato .mapa iframe {
+      min-height: 300px; }
+  .contato .form-contato {
+    padding: 1em; }
+    .contato .form-contato fieldset {
+      border: none;
+      display: flex; }
+      .contato .form-contato fieldset legend {
+        font-size: 2em;
+        padding: 1em 0; }
+      .contato .form-contato fieldset label {
+        margin-bottom: .5em; }
+      .contato .form-contato fieldset .borda-azul-top, .contato .form-contato fieldset .input-nome-email, .contato .form-contato fieldset #mensagem {
+        border: none;
+        border-top: 0.125em solid #02a8f3; }
+      .contato .form-contato fieldset .input-nome-email {
+        width: 100%;
+        margin-bottom: .5em;
+        padding: .7em; }
+      .contato .form-contato fieldset #mensagem {
+        width: 98.8%; }
+      .contato .form-contato fieldset button {
+        background-color: #02a8f3;
+        border: 0.125em solid #02a8f3;
+        padding: 1em;
+        margin-top: .5em;
         color: #fff;
-        position: relative;
-        font-size: 2.5em;
-        opacity: 0;
-        transition: opacity 1s; }
+        transition: 1s;
+        float: right;
+        width: 100%; }
+        .contato .form-contato fieldset button:hover, .contato .form-contato fieldset button focus {
+          background-color: transparent;
+          color: #48524f; }
 
-@media (min-width: 500px) {
-  .ensaios figure figcaption {
-    top: -7em; }
-    .ensaios figure figcaption a {
-      font-size: 3em; } }
-@media (min-width: 500px) {
-  .ensaios figure figcaption {
-    font-size: 2em; } }
-@media (min-width: 800px) {
-  .titulo-principal {
-    margin-bottom: 6em; }
-
-  .ensaios {
+@media (min-width: 769px) {
+  .contato {
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-around; }
-    .ensaios figure {
+    .contato .endereco-mapa {
       width: 45%; }
-      .ensaios figure:nth-child(4) {
-        order: -1; } }
+      .contato .endereco-mapa .endereco {
+        padding: 0 0 1em 0; }
+      .contato .endereco-mapa .mapa {
+        height: 80%; }
+    .contato .form-contato {
+      width: 45%;
+      padding: 0; }
+      .contato .form-contato fieldset legend {
+        padding: 0 0 1em 0; }
+      .contato .form-contato fieldset .input-nome-email {
+        width: 98.8%; } }
 
-/*# sourceMappingURL=ensaios.css.map */
+/*# sourceMappingURL=contato.css.map */
